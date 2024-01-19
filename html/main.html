@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>admin main</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="">
+   <div class="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]">
+      <header class="w-screen max-h-[300px] text-center text-xl justify-center items-center mt-[100px]">
+         <h1 class="text-3xl font-bold">NATANAEL CANO WEB PAGE ADMIN</h1>
+         <p class="max-w-[50%] mx-auto">Esta pagina sirve para llenar la informacion hacerca de conciertos y lanzamientos musicales en la pagina de natanael cano, la informacion que se rellene aqui es con la que se llenara la seccion de musica y de tickets de natanael cani</p>
+      </header>
+      <div class="formContainer">
+         <div class="max-w-[70%] mx-auto bg-white p-8 rounded-md shadow-md mt-5">
+            <h2 class="text-2xl font-semibold mb-4">Añadir Fecha de Concierto</h2>
+      
+            <form id="conciertoForm" class="flex flex-wrap gap-5 items-center justify-center">
+              <div>
+                <label for="sitio" class="block text-sm font-medium text-gray-600">Sitio</label>
+                <input type="text" id="sitio" name="sitio" class="mt-1 p-2  w-[30&] border rounded-md">
+              </div>
+      
+              <div>
+                <label for="ciudad" class="block text-sm font-medium text-gray-600">Ciudad</label>
+                <input type="text" id="ciudad" name="ciudad" class="mt-1 p-2  w-[30&] border rounded-md">
+              </div>
+      
+              <div>
+                <label for="estado" class="block text-sm font-medium text-gray-600">Estado</label>
+                <input type="text" id="estado" name="estado" class="mt-1 p-2  w-[30&] border rounded-md">
+              </div>
+      
+              <div>
+                <label for="fecha" class="block text-sm font-medium text-gray-600">Fecha</label>
+                <input type="date" id="fecha" name="fecha" class="mt-1 p-2  w-[30&] border rounded-md">
+              </div>
+      
+              <div>
+                <label for="entradas" class="block text-sm font-medium text-gray-600">Cantidad de Entradas</label>
+                <input type="number" id="entradas" name="entradas" class="mt-1 p-2  w-[30&] border rounded-md">
+              </div>
+      
+              <div class="text-center">
+                <button type="button" id="btnAnadirConcierto"  class="px-4 py-2 bg-red-400 text-white rounded-md">Guardar Concierto</button>
+              </div>
+            </form>
+          </div>
+      </div>
+
+      <div class="formContainer">
+         <div class="max-w-[70%] mx-auto bg-white p-8 rounded-md shadow-md mt-5">
+            <h2 class="text-2xl font-semibold mb-4">Añadir  lanzamiento musical </h2>
+      
+            <form id="conciertoForm" class="flex flex-wrap gap-5 items-center justify-center">
+              <div>
+                <label for="sitio" class="block text-sm font-medium text-gray-600">titulo</label>
+                <input type="text" id="titulo" name="titulo" class="mt-1 p-2  w-[30&] border rounded-md">
+              </div>
+      
+              <div>
+                <label for="ciudad" class="block text-sm font-medium text-gray-600">duracion</label>
+                <input type="text" id="duracion" name="duracion" class="mt-1 p-2  w-[30&] border rounded-md">
+              </div>
+      
+              <div>
+                <label for="estado" class="block text-sm font-medium text-gray-600">enlace de img</label>
+                <input type="text" id="enlaceImg" name="enlaceImg" class="mt-1 p-2  w-[30&] border rounded-md">
+              </div>
+      
+              <div>
+                <label for="fecha" class="block text-sm font-medium text-gray-600">Fecha</label>
+                <input type="date" id="fechaMusica" name="fechaMusica" class="mt-1 p-2  w-[30&] border rounded-md">
+              </div>
+      
+              <div>
+                <label for="entradas" class="block text-sm font-medium text-gray-600">enlace de youtube</label>
+                <input type="text" id="linkYoutube" name="linkYoutube" class="mt-1 p-2  w-[30&] border rounded-md">
+              </div>
+      
+              <div class="text-center">
+                <button type="button" id="btnAnadirMusica"  class="px-4 py-2 bg-red-400 text-white rounded-md">Guardar musica</button>
+              </div>
+            </form>
+          </div>
+      </div>
+
+
+      <h1 class="text-6xl text-center font-bold mt-[100px]">Seccion de informacion</h1>
+      
+    <div class="max-w-[70%] mx-auto bg-white p-8 rounded-md shadow-md mt-5">
+      <h2 class="text-2xl font-semibold mb-4">Conciertos Registrados</h2>
+
+      <table class="min-w-full bg-white border border-gray-300">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 border-b">Sitio</th>
+            <th class="py-2 px-4 border-b">Ciudad</th>
+            <th class="py-2 px-4 border-b">Estado</th>
+            <th class="py-2 px-4 border-b">Fecha</th>
+            <th class="py-2 px-4 border-b">Entradas</th>
+            <th class="py-2 px-4 border-b">Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaConciertoBody"></tbody>
+      </table>
+    </div>
+
+     
+    <div class="max-w-[70%] mx-auto flex flex-col justify-center items-center bg-white p-8 rounded-md shadow-md mt-5">
+      <h2 class="text-2xl font-semibold mb-4">Musica Registrada</h2>
+
+      <table class="max-w-full bg-white border border-gray-300">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 border-b">titulo</th>
+            <th class="py-2 px-4 border-b">duracion</th>
+            <th class="py-2 px-4 border-b">enlace de img</th>
+            <th class="py-2 px-4 border-b">fecha</th>
+            <th class="py-2 px-4 border-b">enlace portada</th>
+            <th class="py-2 px-4 border-b">Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="musicaTableBody" class="overflow-hidden"></tbody>
+      </table>
+    </div>
+
+    </div>
+   </div>
+</body>
+
+<script src="../js/index.js" type="module"></script>
+
+<style>
+  .musicLink {
+    background: red;
+  }
+</style>
+</html>
