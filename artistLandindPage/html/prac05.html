@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/formEstilos.css">k
+   <title>Document</title>
+</head>
+<body>
+   <form action="https://formsubmit.co/2022021030109@upsin.edu.mx" method="post">
+      <div class="contenedor">
+         <h1>Fomularios</h1>
+         <div class="nombre">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe aqui tu nombre" required> <br>
+         </div>
+
+         <div class="fechaNacimiento">
+            <label for="fechaNacimiento">Fecha de nacimiento</label>
+            <input type="date" name="fechaNacimiento" id="fechaNacimiento" required> <br>
+         </div>
+
+         <div class="sexo">
+            <label for="sexo">Sexo<label>
+            <li>
+               <input type="radio" name="sexo" id="sexoMasculino" required>
+               <label for="masculino">Masculino</label>
+               <input type="radio" name="sexo" id="sexoFemenino" required>
+               <label for="Femenino">Femenino</label>
+            </li>
+         </div>
+
+         <div class="lugarNacimiento">
+            <label for="lugarNacimiento">Lugar de nacimiento</label> <br>
+            <select name="lugar de nacimiento" id="lugarNacimiento">
+               <option value="Escuinapa">Escuinapa</option>
+               <option value="Rosario">Rosario</option>
+               <option value="Concordia">Concordia</option>
+               <option value="Mazatlan">Mazatlan</option>
+               <option value="lacruz">La Cruz Alvarado</option>
+               <option value="culiacan">Culiacan</option>
+               <option value="salvadoralvarado">Salvador Alvarado</option>
+               <option value="guasave">Guasave</option>
+               <option value="ahome">Ahome</option>
+               <option value="elfuerte">El Fuerte</option>
+
+            </select>
+
+         </div>
+
+         <div class="poblacion">
+            <label for="poblacion">´Poblacion</label> <br>
+            <input type="text" name="poblacion" id="poblacion" required>
+         </div>
+
+         <div class="idiomas">
+            <label for="idiomas">idiomas</label>
+            <li>
+               <input type="checkbox" name="idioma" id="chino" value="chino">
+               <label for="chino">Chino</label>
+               <input type="checkbox" name="idioma" id="Ingles" value="Ingles">
+               <label for="Ingles">Ingles</label>
+               <input type="checkbox" name="idioma" id="Frances" value="Frances">
+               <label for="frances">Frances</label>
+               <input type="checkbox" name="idioma" id="Español" value="Español">
+               <label for="Español">Español</label>
+            </li>
+         </div>
+
+         <input type="email" name="email" id="email" placeholder="Escribir a tu corrreo" required class="correo">
+
+         <div class="egresoPrimaria">
+            <label for="mes">Mes y año de Egreso de la Educacion Primaria</label>
+            <input type="month" name="Mes" id="mes required"> <br>
+
+         </div>
+
+         <div class="habitos">
+            <label for="habitos">Habitos Personales</label> <br>
+            <textarea name="Habitos" id="habitos" cols="30" rows="10" required placeholder="Escribe aqui tus habitos">
+
+
+            </textarea>
+         </div>
+
+         <div class="ingresos">
+
+            <label for="ingresos">Ingresos</label> <br>
+            <input type="range" name="ingresos" id="ingresso" list="ingresoList" min="5000" max="50000" value="5000">
+            <datalist id="ingresoList">
+               <option value="5000">5000</option>
+               <option value="10000">10000</option>
+               <option value="15000">15000</option>
+               <option value="20000">20000</option>
+               <option value="25000">25000</option>
+               <option value="30000">30000</option>
+               <option value="35000">35000</option>
+               <option value="40000">40000</option>
+               <option value="45000">45000</option>
+               <option value="50000">50000</option>
+
+            </datalist>
+            <br>
+            <label for="ingresoList" id="datoList">5000 10000 15000 20000 25000 30000 35000 40000 45000 50000</label>
+
+         </div>
+
+         <div class="horario">
+            <label for="">Horario disponible</label> <br>
+            <label for="de"> De</label>
+            <input type="time" name="horario1" id="horario1" required>
+            <label for="A">A</label>
+            <input type="time" name="horario2" id="horario2" required>
+         </div>
+
+
+      </div>
+
+      <input type="button" id="botones" value="Enviar">
+      <input type="button" id="botones" value="Limpiars">
+
+   </form>
+</body>
+</html>

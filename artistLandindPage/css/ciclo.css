@@ -1,0 +1,146 @@
+/*Estilos para la pagina del ciclo del agua*/
+
+/*selector Universal*/
+*{
+   padding: 0;
+   margin: 0;
+}
+
+/*Selector de etiqueta*/
+
+body{
+   background-color: #e6edd9;
+   color: white;
+}
+
+/*Selector de clase*/
+
+.img{
+   width: 100px;
+   border-radius: 1px;
+   padding: 5px;
+   justify-items: center;
+}
+
+.texto{
+   text-align: justify;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 20px;
+   padding: 5px 25px;
+   color: #000;
+}
+
+.encabezado-articulo{
+   padding: 10px;
+   text-align: center;
+   background-color: rgb(83, 152, 87);
+   color: rgb(255, 255, 255);
+   margin: 1em 2em;
+   border-radius: 5px;
+}
+
+.encabezado-aside{
+   padding: 10px 10px;
+   text-align: center;
+   background-color: rgb(89, 161, 81);
+   color: white;
+   margin: 1em 2em;
+}
+
+.menu-aside{
+   text-align: center;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 20px;
+   padding: 0 25px;
+}
+
+.lista-aside{
+   padding: 10px;
+}
+
+.lista-aside li{
+   display: flex;
+   text-align: left;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 20px;
+   padding: 0 2px;
+   list-style: square;
+   color: #0000;
+}
+
+/*Selector ID*/
+
+#contenedor{
+   width: 900px;
+   height: 1000px;
+   background-color: #dee0b7;
+   max-width: 0 auto;
+   border-radius: 5px;
+}
+
+#encabezado{
+   width: 60%;
+   background-color: #6c844e;
+   margin: 1em;
+   padding: 0 50px;
+   border-radius: 5px;
+}
+
+#menu{
+   height: 5%;
+   background-color: #7e815b;
+   margin: 1em;
+   border-radius: 5px;
+}
+
+#contenido{
+   height: 75%;
+   width: 58%;
+   background-color: #b5bf9a;
+   margin: 0.5em;
+   display: inline-block;
+   border-radius: 5px;
+   text-align: center;
+}
+
+#fueraSeccion{
+   height: 75%;
+   width: 35%;
+   background-color: #b5bf9a;
+   margin: 0.5em;
+   display: inline-block;
+   vertical-align: top;
+   border-radius: 5px;
+}
+
+#pie{
+   height: 5%;
+   background-color: #b5bf9a;
+   text-align: center;
+   padding: 5px;
+}
+
+#pie h4{
+   padding: 5px;
+   font-size: 30px;
+}
+
+/*Selector de etiqueta*/
+
+ul{
+   padding: 15px;
+   font-size: 20px;
+}
+
+li{
+   display: inline;
+   padding: 10px 30px;
+   margin: 3em;
+}
+
+/*Selector de evento*/
+li a:hover{
+   color: crimson;
+   text-decoration: none;
+   list-style: none;
+}

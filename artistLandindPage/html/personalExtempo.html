@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/notas.css">
+   <title>Notas</title>
+</head>
+<body>
+   <header>
+      <h1>Pagina web para tus anotaciones</h1>
+      <h2>Escribe tus ideas</h2>
+   </header>
+
+   <section class="notasContainer">
+      <form action="" id="notasForm">
+         <h1>Añade una nota</h1>
+         <input type="text" placeholder="titulo" id="titleInput">
+         <textarea name="textInput" id="textInput" cols="30" rows="10" ></textarea>
+         <input type="submit" value="Guardar nota" id="SubmitInput">
+      </form>
+
+      <aside>
+         <h3>Notas guardadas</h3>
+         <ul id="savedNotesList">
+         </ul>
+      </aside>
+   </section>
+
+   <footer>
+      <p>Dando click en la nota de la lista del aside se mostrara la nota que guardaste</p>
+      <p>Actualizaciones futuras:Mejorar el frontend <br/> Desarrollar el backend para guardar la informacion una base de datos y tener persistencia de informacion</p>
+      <h4>Pagina web hecha por @Bernardo Rosas Garcia</h4>
+   </footer>
+</body>
+</html>
+
+
+
+<script>
+   const titleInput = document.querySelector('#titleInput');
+   const textInput = document.querySelector('#textInput');
+   const SubmitInput = document.querySelector('#SubmitInput');
+   const savedNotesList = document.querySelector('#savedNotesList')
+
+   SubmitInput.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const titleValue = titleInput.value;
+      const textValue = textInput.value;
+
+      const newElement = document.createElement('li');
+      newElement.dataset.text = textValue;
+      newElement.innerHTML = `${titleValue}`;
+      newElement.dataset.text
+      savedNotesList.appendChild(newElement);
+      newElement.addEventListener("click", (e) => {
+         e.preventDefault()
+         titleInput.value = newElement.innerHTML;
+         textInput.value = newElement.dataset.text;
+      })
+   })
+
+
+
+</script>

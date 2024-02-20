@@ -1,0 +1,16 @@
+body {
+   font-family: Arial, sans-serif;
+   text-align: center;
+}
+.auto {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 20px;
+}
+.auto img {
+   max-width: 100%;
+   height: auto;
+   width: 400px;
+}
+

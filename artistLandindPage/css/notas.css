@@ -1,0 +1,59 @@
+
+body {
+   padding: 0;
+   margin: 0;
+}
+header {
+   background: rgb(167, 109, 9);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   font-size: 2rem;
+}
+
+.notasContainer {
+   display: flex;
+   height: 600px;
+}
+
+.notasContainer form {
+   width: 80%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: start;
+   margin-left: 200px;
+}
+
+.notasContainer > aside{
+   width: 20%;
+   background: rgb(31, 19, 19);
+   color: white;
+}
+
+form {
+   display: inline-block;
+   margin-left: 100px;
+   font-size: 2rem;
+}
+
+form input {
+   font-size: 2rem;
+   padding: 10px 90px;
+   margin-bottom: 20px;
+}
+
+ul li {
+   cursor: pointer;
+}
+
+footer {
+   width: 100%;
+   background: black;
+   height: 300px;
+   color: white;
+   font-size: 2rem;
+   text-align: center;
+}
